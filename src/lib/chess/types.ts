@@ -1,10 +1,10 @@
 // Chess-related TypeScript types and interfaces
 // This file contains all chess-specific type definitions
 
-import type { Chess, Move as ChessJSMove, Square, PieceSymbol, Color } from 'chess.js';
+import type { Chess, Square, PieceSymbol, Color } from 'chess.js';
 
-// Enhanced Move interface extending chess.js Move type
-export interface ChessMove extends ChessJSMove {
+// Enhanced Move interface based on chess.js Move type
+export interface ChessMove {
   from: Square;
   to: Square;
   promotion?: 'q' | 'r' | 'b' | 'n';
@@ -77,4 +77,3 @@ export type GameResult = 'ongoing' | 'white-wins' | 'black-wins' | 'draw' | 'sta
 
 // Export chess.js types for convenience
 export type { Chess, Square, PieceSymbol, Color };
-export type { Move as ChessJSMove } from 'chess.js';
