@@ -33,12 +33,12 @@ export const initializeGame = (config?: ChessGameConfig): Chess => {
  * Get comprehensive game state from chess instance
  */
 export const getGameState = (chess: Chess): GameState => {
-  const history = chess.history({ verbose: true }) as ChessMove[];
+  const legalMoves = chess.moves({ verbose: true }) as ChessMove[];
   
   return {
     fen: chess.fen(),
     turn: chess.turn(),
-    moves: history,
+    moves: legalMoves, // Available legal moves, not move history
     history: chess.history(),
     inCheck: chess.inCheck(),
     inCheckmate: chess.isCheckmate(),
