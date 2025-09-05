@@ -9,3 +9,4 @@ export * from './chess/fenHandler';
 export * from './chess/moveHistory';
 export * from './engine/stockfishEngine';
 export * from './engine/engineWrapper';
+export * from './engine/test-stockfishEngine';
