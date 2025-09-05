@@ -364,7 +364,7 @@ export class MoveHistory {
       totalMoves: this.moves.length,
       captures: this.moves.filter(move => move.capturedPiece).length,
       checks: this.moves.filter(move => move.isCheck).length,
-      castles: this.moves.filter(move => move.move.flags.includes('c')).length,
+      castles: this.moves.filter(move => move.move.flags.includes('k') || move.move.flags.includes('q')).length,
       promotions: this.moves.filter(move => move.move.promotion).length,
       enPassants: this.moves.filter(move => move.move.flags.includes('e')).length,
     };
